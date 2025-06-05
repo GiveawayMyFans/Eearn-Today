@@ -650,9 +650,18 @@
             </div>
         </div>
         <!-- mobile screen card end -->
+                    
+<input type="text" id="referralLink" readonly style="width: 100%; padding: 10px;">
+
+<script>
+  // Example: Replace with the logged-in user's actual username
+  const username = "Andy"; // This should come from your login system
+  const referralLink = https:index.html.com/register.html?ref=${username};
+  document.getElementById("referralLink").value = referralLink;
+</script>
 
         <div class="mt-4">
-            <label>My referral link</label>
+            <label>Your referral link</label>
             <div class="input-group mb-3">
                 <input type="text" id="refer-link" class="form-control copy-text"
                     value="https://langapay.site/register/KennyAndy" placeholder="referallink.com/refer"
