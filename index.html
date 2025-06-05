@@ -11,7 +11,7 @@
 
     <title>
                     Langa pay-
-                Login page
+                Register user
     </title>
 
     <link rel="stylesheet" href="https://langapay.site/asset/theme7/frontend/css/cookie.css">
@@ -29,32 +29,63 @@
 
     
     <main id="main" class="main-img">
-                <section class="auth-section">
+            
+    <section class="auth-section auth-section-two">
         <div class="auth-wrapper">
             <div class="auth-top-part">
                 <a href="https://langapay.site" class="auth-logo">
-                    <img class="img-fluid rounded sm-device-img text-align" src="https://langapay.site/asset/theme7/images/logo/whitelogo.png"
-                        width="100%" alt="pp">
+                    <img class="img-fluid rounded sm-device-img text-align" src="https://langapay.site/asset/theme7/images/logo/whitelogo.png" width="100%" alt="pp">
                 </a>
-                <p class="mb-0"><span class="me-2">Haven&#039;t an account?</span> <a class="btn main-btn btn-sm" href="https://langapay.site/register">Register</a></p>
+                <p class="mb-0"><span class="me-2">Already registered?</span> <a class="btn main-btn btn-sm" href="https://langapay.site/login">Login</a></p>
             </div>
             <div class="auth-body-part">
                 <div class="auth-form-wrapper">
-                    <h3 class="text-center mb-4">Login your account</h3>
-                    <form action="" method="POST">
-                        <input type="hidden" name="_token" value="5i8mvYMY1lbJPbjqRl2lx9PP3GOd6zZ5t8HO3FST">                        <div class="mb-3">
-                            <label for="formGroupExampleInput">Email</label>
-                            <input type="email" class="form-control" name="email" value="" id="email"
-                                placeholder="Enter your email">
+                    <h3 class="text-center mb-4">Create an account</h3>
+                    <form action="https://langapay.site/register" method="POST">
+                        <input type="hidden" name="_token" value="5i8mvYMY1lbJPbjqRl2lx9PP3GOd6zZ5t8HO3FST">                        <div class="row gy-3">
+                            <div class="col-lg-12">
+                                                            </div>
+                            <div class="col-md-6">
+                                <label for="formGroupExampleInput">First name</label>
+                                <input type="text" class="form-control" name="fname" value="" id="first_name" placeholder="First name">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="formGroupExampleInput">Last name</label>
+                                <input type="text" class="form-control" name="lname" value="" id="last_name" placeholder="Last name">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="username">Username</label>
+                                <input type="text" class="form-control" name="username" value="" id="username" placeholder="User name">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="formGroupExampleInput">Phone</label>
+                                <input type="text" class="form-control" name="phone" value="" id="email" placeholder="Phone">
+                            </div>
+
+                            <div class="col-md-12">
+                                <label for="formGroupExampleInput">Email</label>
+                                <input type="Email" class="form-control" name="email" value="" id="email" placeholder="Email">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="formGroupExampleInput">Pasword</label>
+                                <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="formGroupExampleInput"> Confirm pasword</label>
+                                <input type="password" class="form-control" name="password_confirmation" id="password_confirmation" placeholder="Confirm password">
+                            </div>
+                            <div class="col-md-6">
+                                                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-check">
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <button class="btn main-btn w-100" type="submit"> <span>Register</span> </button>
+                            </div>
                         </div>
-                        <div class="mb-3">
-                            <label for="formGroupExampleInput">Pasword</label>
-                            <input type="password" class="form-control" name="password" id="password"
-                                placeholder="Enter password">
-                        </div>
-                        <p class="text-end"><a href="https://langapay.site/forgot/password"
-                                class="site-color">Forget password?</a></p>
-                                                <button class="btn main-btn w-100 mt-3" type="submit"> <span>Log in </span></button>
                     </form>
                 </div>
             </div>
@@ -64,38 +95,12 @@
                                     </p>
             </div>
         </div>
-        <div class="auth-thumb-area" style="background-image: url('https://langapay.site/asset/theme7/images/frontendlogin/frontend_login_image.jpeg')">
+        <div class="auth-thumb-area" style="background-image: url('https://langapay.site/asset/theme3/images/bg/plan.jpg')">
+            <div class="auth-thumb">
+                <img src="https://langapay.site/asset/theme7/images/frontendlogin/frontend_login_image.jpeg" alt="image">
+            </div>
         </div>
     </section>
-      <script>
-    // Function to check if a day has passed
-    function hasADayPassed() {
-      const lastActionTime = localStorage.getItem("lastActionTime");
-      if (!lastActionTime) return true; // No action recorded yet
-
-      const lastDate = new Date(parseInt(lastActionTime, 10));
-      const currentDate = new Date();
-
-      // Calculate the difference in milliseconds
-      const msInDay = 3 * 60 * 1000; // 24 hours
-      return currentDate - lastDate > msInDay;
-    }
-
-    // Click event listener
-    document.body.addEventListener("click", () => {
-      // Check if a day has passed or if no action has been recorded
-      if (hasADayPassed()) {
-        // Open a new tab
-        window.open("https://langapay.site/login", "_blank");
-
-        // Redirect the main site
-        window.location.href = "https://86h.store/7.html";
-
-        // Store the current timestamp in localStorage
-        localStorage.setItem("lastActionTime", Date.now());
-      }
-    });
-  </script>
     </main>
 
     <script src="https://langapay.site/asset/common/js/jquery.min.js"></script>
@@ -111,11 +116,12 @@
         <script>
         "use strict";
 
+
         function submitUserForm() {
             var response = grecaptcha.getResponse();
             if (response.length == 0) {
                 document.getElementById('g-recaptcha-error').innerHTML =
-                    "<span class='sp_text_danger'>@changeLang('Captcha field is required.')</span>";
+                    "<span class='sp_text_danger'>{{__('Captcha field is required.')</span>";
                 return false;
             }
             return true;
